@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}EnergyEdu - Learn{% endblock %}
+
+{% block content %}
+<div class="bg-white rounded-lg shadow-lg p-6">
+    <h2 class="text-2xl font-bold text-green-800 mb-4">Learn About Energy Policies and Technologies</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-gray-50 p-4 rounded-lg shadow">
+            <h3 class="text-lg font-semibold mb-2">Energy Policies</h3>
+            <ul class="list-disc list-inside">
+                <li>International Energy Agreements</li>
+                <li>National Energy Policies</li>
+                <li>Renewable Energy Incentives</li>
+                <li>Carbon Pricing Mechanisms</li>
+            </ul>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg shadow">
+            <h3 class="text-lg font-semibold mb-2">Transition Technologies</h3>
+            <ul class="list-disc list-inside">
+                <li>Solar Power Systems</li>
+                <li>Wind Energy Technologies</li>
+                <li>Energy Storage Solutions</li>
+                <li>Smart Grid Technologies</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="mt-6">
+        <h3 class="text-lg font-semibold mb-2">Ask Gemini</h3>
+        <input type="text" id="learn-question-input" placeholder="Ask a question about energy policies or technologies..." class="w-full p-3 border border-green-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+        <button id="learn-ask-button" class="mt-2 bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 transition duration-300">Get Answer</button>
+    </div>
+    
+    <div id="learn-response-area" class="mt-4 p-4 bg-gray-100 rounded-md hidden"></div>
+</div>
+{% endblock %}

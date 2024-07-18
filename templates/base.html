@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}EnergyEdu{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-green-100 to-blue-100">
+    <header class="container mx-auto p-4">
+        <nav class="flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-green-800">EnergyEdu</h1>
+            <ul class="flex space-x-4">
+                <li><a href="{{ url_for('index') }}" class="text-green-700 hover:text-green-900">Home</a></li>
+                <li><a href="{{ url_for('learn') }}" class="text-green-700 hover:text-green-900">Learn</a></li>
+                <li><a href="{{ url_for('quiz') }}" class="text-green-700 hover:text-green-900">Quiz</a></li>
+                <li><a href="{{ url_for('progress') }}" class="text-green-700 hover:text-green-900">Progress</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-4">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="container mx-auto p-4 text-center text-green-700">
+        © 2024 EnergyEdu - Powered by Google Gemini API
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

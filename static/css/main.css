@@ -1,0 +1,79 @@
+/* Custom styles for EnergyEdu */
+
+/* Override some Tailwind defaults */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Custom component styles */
+.energy-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.energy-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Custom utility classes */
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Quiz specific styles */
+.quiz-option {
+    transition: background-color 0.3s ease;
+}
+
+.quiz-option:hover {
+    background-color: #e0f2f1;
+}
+
+.quiz-option.selected {
+    background-color: #4db6ac;
+    color: white;
+}
+
+/* Progress bar styles */
+.progress-bar {
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Custom button styles */
+.btn-energy {
+    background-color: #2ecc71;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-energy:hover {
+    background-color: #27ae60;
+}
